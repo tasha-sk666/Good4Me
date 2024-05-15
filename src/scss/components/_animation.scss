@@ -1,0 +1,36 @@
+.burger--active {
+  &::after,
+  &::before {
+    background-color: var(--accent-color);
+  }
+
+  &::after {
+    top: 50%;
+    transform: translateY(-50%) rotate(-27deg);
+  }
+
+  &::before {
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%) rotate(27deg);
+  }
+
+  .burger__line {
+    opacity: 0;
+  }
+}
+
+.nav--active {
+  opacity: 1;
+  transform: translateX(0);
+
+  .nav__item {
+    animation: fadeInRight 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+
+    @for $i from 1 through 6 {
+      &:nth-child(#{$i}) {
+        animation-delay: (100ms * $i);
+      }
+    }
+  }
+}

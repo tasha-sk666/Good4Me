@@ -1,0 +1,11 @@
+.title {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 135%;
+  text-transform: uppercase;
+  color: var(--dark-color);
+
+  @include mobile {
+    font-size: 28px;
+  }
+}

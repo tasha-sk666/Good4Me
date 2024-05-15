@@ -1,0 +1,72 @@
+.burger {
+  $height: 2.5px;
+
+  position: relative;
+  width: 40px;
+  height: 20px;
+  z-index: var(--burger-index);
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    border-radius: 5px;
+    height: $height;
+    background-color: var(--dark-color);
+    transition: transform var(--duration-medium), width var(--duration-medium), background-color var(--duration-medium);
+    will-change: transform;
+  }
+
+  &::after {
+    top: 2px;
+    width: 100%;
+  }
+
+  &::before {
+    bottom: 0;
+    width: 65%;
+  }
+
+  &__line {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    display: block;
+    border-radius: 5px;
+    width: 100%;
+    height: $height;
+    background-color: var(--dark-color);
+    opacity: 1;
+    transform: translate(0, -50%, 0);
+    transition: opacity var(--duration-medium), background-color var(--duration-medium);
+  }
+
+  @include hover {
+    &::after,
+    &::before {
+      background-color: var(--accent-color);
+    }
+
+    .burger__line {
+      background-color: var(--accent-color);
+    }
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &:focus-visible {
+    outline: none;
+
+    &::after,
+    &::before {
+      background-color: var(--accent-dark-color);
+    }
+
+    .burger__line {
+      background-color: var(--accent-dark-color);
+    }
+  }
+}

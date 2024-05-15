@@ -1,0 +1,64 @@
+.swiper-button-prev,
+.swiper-button-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  box-shadow: 0 0 4px 0 #00000042;
+  background-color: var(--accent-color);
+  transition: background-color var(--duration-short), opacity var(--duration-short);
+
+  &::after {
+    content: none;
+  }
+
+  svg {
+    display: block;
+    width: 7px;
+    height: 14px;
+    fill: var(--light-color);
+    transition: fill var(--duration-short);
+  }
+
+  &.swiper-button-disabled {
+    opacity: 0.6;
+  }
+
+  @include hover {
+    background-color: var(--light-color);
+
+    svg {
+      fill: var(--accent-color);
+    }
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: var(--accent-dark-color);
+  }
+}
+
+.swiper-pagination {
+  .swiper-pagination-bullet {
+    margin: 0;
+    border: 2px solid var(--grey-color);
+    width: 14px;
+    height: 14px;
+    background-color: var(--light-color);
+
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    border-color: transparent;
+    background-color: var(--accent-color);
+  }
+}

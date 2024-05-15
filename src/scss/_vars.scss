@@ -1,0 +1,22 @@
+@import "mixins";
+
+:root {
+  --font-family: "Jost", sans-serif;
+  --content-width: 1678px;
+  --container-offset: 24px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --light-color: #fff;
+  --dark-color: #000;
+  --grey-color: #828181;
+  --light-grey-color: #9d9d9d;
+  --accent-color: #f6623e;
+  --accent-dark-color: #c74f31;
+  --beige-color: #fff8f6;
+  --beige-dark-color: #fef0e7;
+  --duration-short: 0.3s;
+  --duration-medium: 0.4s;
+  --timing-func: cubic-bezier(0.2, 0.6, 0, 1);
+  --gap: 30px;
+  --nav-index: 10;
+  --burger-index: 11;
+}

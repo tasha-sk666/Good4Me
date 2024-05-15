@@ -1,0 +1,171 @@
+.structure {
+  padding-top: 86px;
+  padding-bottom: 94px;
+  background-color: var(--beige-color);
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: 40px;
+    text-align: center;
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 84px;
+    max-width: 647px;
+    font-size: 20px;
+    line-height: 165%;
+    text-align: center;
+    color: var(--grey-color);
+  }
+
+  &__content {
+    position: relative;
+    width: 100%;
+    height: 693px;
+    max-width: 1251px;
+
+    @media (max-width: (1240px)) {
+      height: 440px;
+      max-width: 964px;
+    }
+
+    @include tablet {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      height: 100%;
+      max-width: 100%;
+      gap: var(--gap);
+    }
+  }
+
+  &__rounds {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/structure-round.svg");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include tablet {
+      position: relative;
+      height: 30svh;
+      min-height: 300px;
+    }
+  }
+
+  &__picture {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 0;
+    width: 60%;
+    height: 100%;
+    background-image: url("../img/structure-vitamin.png");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%);
+
+    @media (max-width: (1240px)) {
+      width: 484px;
+    }
+
+    @include tablet {
+      width: 40%;
+      background-image: url("../img/hair-skin-nails.png");
+    }
+  }
+
+  @include tablet {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.structure-info {
+  &__item {
+    position: absolute;
+
+    &:nth-child(1) {
+      left: 3%;
+      top: 14%;
+
+      @media (max-width: (1240px)) {
+        left: 0;
+      }
+    }
+
+    &:nth-child(2) {
+      left: 3%;
+      top: 47%;
+    }
+
+    &:nth-child(3) {
+      left: 3%;
+      top: 79%;
+
+      @media (max-width: (1240px)) {
+        left: 5%;
+      }
+    }
+
+    &:nth-child(4) {
+      right: 0;
+      top: 4%;
+    }
+
+    &:nth-child(5) {
+      right: -2%;
+      top: 40%;
+    }
+
+    &:nth-child(6) {
+      right: 0%;
+      top: 79%;
+    }
+
+    @include tablet {
+      position: unset;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    color: var(--accent-color);
+  }
+
+  &__descr {
+    margin: 0;
+    width: 250px;
+    font-size: 14px;
+    line-height: 180%;
+    color: var(--dark-color);
+
+    @include tablet {
+      width: 100%;
+    }
+  }
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    gap: clamp(30px, 3.8vw, 72px);
+  }
+
+  @include mobile {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

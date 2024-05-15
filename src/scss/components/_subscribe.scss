@@ -1,0 +1,102 @@
+.subscribe {
+  fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    padding: 0;
+    width: 100%;
+  }
+
+  legend {
+    margin: 0;
+    margin-bottom: 11px;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 100%;
+    text-align: center;
+    color: var(--dark-color);
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 32px;
+    max-width: 348px;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #454545;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--dark-color);
+    padding-bottom: 13px;
+    width: 100%;
+    gap: var(--gap);
+
+    @include mobile {
+      flex-direction: column;
+      border-bottom: unset;
+      gap: 15px;
+    }
+  }
+
+  label {
+    position: relative;
+    width: 100%;
+
+    @include mobile {
+      border-bottom: 2px solid var(--dark-color);
+    }
+  }
+
+  input {
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--dark-color);
+
+    &::placeholder {
+      font-size: 16px;
+      line-height: 150%;
+      color: var(--dark-color);
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+
+  &__btn {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 180%;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    transition: color var(--duration-short), opacity var(--duration-short);
+
+    @include hover {
+      color: var(--dark-color);
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+
+    &:focus-visible {
+      outline: none;
+      color: var(--accent-dark-color);
+      opacity: 0.6;
+    }
+  }
+
+  .just-validate-error-label {
+    position: absolute;
+    top: -19px;
+    font-size: 14px;
+  }
+}

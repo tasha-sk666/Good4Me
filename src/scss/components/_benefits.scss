@@ -1,0 +1,123 @@
+.benefits {
+  padding-top: 72px;
+  padding-bottom: 263px;
+
+  &__title {
+    margin: 0 auto;
+    margin-bottom: 103px;
+    max-width: 541px;
+    text-align: center;
+    text-transform: capitalize;
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__marks {
+    margin-bottom: 89px;
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__list {
+    @include flex-all-center;
+
+    flex-wrap: wrap;
+    gap: clamp(1rem, 2.7vw, 80px);
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    padding: 44px 25px;
+    width: 370px;
+    text-align: center;
+
+    &:nth-child(2) {
+      box-shadow: 0 0 15px 0 #00000010;
+      background-color: var(--beige-color);
+
+      .benefits__icon {
+        background-color: var(--accent-color);
+
+        svg {
+          fill: var(--light-color);
+        }
+      }
+    }
+
+    @include tablet {
+      padding: 25px;
+    }
+  }
+
+  &__icon {
+    margin-bottom: 33px;
+    border-radius: 20px;
+    padding: 19px;
+    width: 100px;
+    height: 100px;
+    background-color: var(--beige-color);
+    transition: background-color var(--dur-medium);
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: var(--dark-color);
+      transition: fill var(--dur-medium);
+    }
+  }
+
+  h3 {
+    margin: 0;
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 30px;
+    text-transform: capitalize;
+
+    @include mobile {
+      font-size: 24px;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 200%;
+    color: var(--light-grey-color);
+  }
+
+  @include tablet {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.marks {
+  @include flex-all-center;
+
+  flex-wrap: wrap;
+  gap: clamp(1rem, 9vw, 170px);
+  row-gap: var(--gap);
+
+  &__item {
+    font-weight: 600;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: #9c9c9c;
+
+    @include mobile {
+      font-size: 18px;
+    }
+  }
+
+  @include tablet {
+    gap: var(--gap);
+  }
+}

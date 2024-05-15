@@ -1,0 +1,50 @@
+.form-message {
+  position: fixed;
+  right: var(--container-offset);
+  bottom: var(--container-offset);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  border-radius: 25px;
+  padding: 15px;
+  box-shadow: 0 0 10px 5px #797f8536;
+  transform: translateX(120%);
+  transition: transform var(--duration-medium);
+  will-change: transform;
+
+  &.active {
+    transform: translateX(0);
+  }
+
+  &--success {
+    color: #1e4620;
+    background-color: #edf7ed;
+  }
+
+  &--error {
+    color: #5f2120;
+    background-color: #fdeded;
+  }
+
+  p {
+    margin: 0;
+    font-size: 16px;
+    color: currentColor;
+
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+
+  svg {
+    display: inline-block;
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+  }
+
+  @include mobile {
+    width: calc(100% - (var(--container-offset)) * 2);
+  }
+}
