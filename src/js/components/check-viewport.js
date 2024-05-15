@@ -7,7 +7,7 @@ export const isMobile = () => {
 };
 
 export const isTablet = () => {
-  if (window.innerWidth >= 769 && window.innerWidth <= 1024) {
+  if (window.innerWidth <= 1024) {
     return true;
   }
 
