@@ -11,9 +11,9 @@
   width: 100%;
   height: 100%;
   background-color: #fff;
-  opacity: 0;
+  opacity: 1;
   transform: translateX(-100%);
-  transition: var(--duration-medium) var(--timing-func);
+  transition: opacity var(--duration-long) var(--timing-func), transform var(--duration-long) var(--timing-func);
   will-change: transform;
 
   &__list {
@@ -32,6 +32,7 @@
   &__item {
     opacity: 0;
     transform: translateX(-100%);
+    will-change: transform;
   }
 
   &__link {

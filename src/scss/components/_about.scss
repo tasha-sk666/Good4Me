@@ -130,6 +130,7 @@
 
   &__img {
     position: relative;
+    height: 875px;
 
     &::before {
       content: "";
@@ -141,6 +142,10 @@
       width: 95%;
       height: 80%;
       background-color: var(--beige-dark-color);
+    }
+
+    img {
+      height: 100%;
     }
 
     @include small-tablet {
@@ -188,6 +193,15 @@
     font-size: 16px;
     text-transform: uppercase;
     color: var(--dark-color);
+  }
+
+  &__prises {
+    margin-bottom: 10px;
+
+    @include small-tablet {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__prise {

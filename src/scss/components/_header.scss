@@ -14,7 +14,7 @@
     height: auto;
 
     @include mobile {
-      width: 135px;
+      width: 120px;
     }
   }
 
@@ -35,6 +35,10 @@
 
     &:not(:last-child) {
       margin-right: 25px;
+
+      @include mobile {
+        margin-right: 10px;
+      }
     }
 
     @include hover {

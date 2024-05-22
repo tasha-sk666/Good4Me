@@ -23,6 +23,7 @@
 .nav--active {
   opacity: 1;
   transform: translateX(0);
+  transition: opacity var(--duration-short) var(--timing-func), transform 1s var(--timing-func);
 
   .nav__item {
     animation: fadeInRight 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;

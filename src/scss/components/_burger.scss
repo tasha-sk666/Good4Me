@@ -69,4 +69,8 @@
       background-color: var(--accent-dark-color);
     }
   }
+
+  @include mobile {
+    width: 30px;
+  }
 }

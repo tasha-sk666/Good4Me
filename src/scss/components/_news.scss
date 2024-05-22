@@ -84,21 +84,22 @@
     }
   }
 
-  &__content {
-    h3 {
-      margin: 0;
-      font-weight: 500;
-      font-size: 18px;
-      line-height: 120%;
-      text-transform: uppercase;
-      color: var(--dark-color);
-    }
+  &__title {
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: var(--dark-color);
+  }
 
-    p {
-      font-size: 14px;
-      line-height: 150%;
-      color: var(--grey-color);
-    }
+  &__descr {
+    margin: 0;
+    margin-bottom: 19px;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--grey-color);
   }
 
   &__link {

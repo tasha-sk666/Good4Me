@@ -1,12 +1,16 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay, A11y } from 'swiper/modules';
 import { isTablet } from './check-viewport';
-Swiper.use([Navigation, Pagination, Autoplay]);
+Swiper.use([Navigation, Pagination, Autoplay, A11y]);
 
 const swiperAbout = new Swiper(".about__swiper", {
   navigation: {
     nextEl: '.about-swiper-btn-next',
     prevEl: '.about-swiper-btn-prev',
+  },
+  a11y: {
+    prevSlideMessage: 'Previous slide',
+    nextSlideMessage: 'Next slide',
   },
   pagination: {
     el: '.about-swiper-pagination',
