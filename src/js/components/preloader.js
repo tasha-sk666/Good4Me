@@ -3,7 +3,6 @@ import AccentTypographyBuild from "./accent-typography";
 import { disableScroll } from "./disable-scroll";
 import { enableScroll } from "./enable-scroll";
 
-
 disableScroll();
 const animationPreloaderTextLine = new AccentTypographyBuild(`.preloader__text`, 500, `active`, `transform`);
 

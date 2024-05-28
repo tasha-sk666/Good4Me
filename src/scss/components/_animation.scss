@@ -27,7 +27,7 @@
 
 .hero__btn {
   opacity: 0;
-  transition: opacity var(--duration-short) var(--duration-long) ease;
+  transition: border-color var(--duration-short), background-color var(--duration-short), color var(--duration-short), opacity var(--duration-short) var(--duration-extra-long);
 
   .page-loaded & {
     opacity: 1;

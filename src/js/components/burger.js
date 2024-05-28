@@ -6,11 +6,9 @@ import { enableScroll } from './enable-scroll';
   const nav = document?.querySelector('[data-nav]');
   const navItems = document?.querySelectorAll('[data-nav-item]');
 
-
   burger?.addEventListener('click', (e) => {
     burger?.classList.toggle('burger--active');
     nav?.classList.toggle('nav--active');
-
 
     if (burger.classList.contains('burger--active')) {
       burger?.setAttribute('aria-expanded', 'true');
