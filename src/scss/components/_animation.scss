@@ -1,9 +1,9 @@
 .header {
-  transform: translateY(-100%);
-  transition: transform var(--duration-short) var(--duration-short) ease;
+  opacity: 0;
+  transition: opacity var(--duration-short) var(--duration-short) ease;
 
   .page-loaded & {
-    transform: translateY(0);
+    opacity: 1;
   }
 }
 
