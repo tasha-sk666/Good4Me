@@ -1,0 +1,36 @@
+.preloader {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--accent-color);
+  pointer-events: none;
+
+  &__text {
+    font-weight: 700;
+    font-size: 9vw;
+    text-transform: uppercase;
+    color: var(--light-color);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+}
+
+.preloader-animation {
+  .preloader__text {
+    opacity: 1;
+  }
+}
+
+.preloader-none {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-100%);
+  transition: transform var(--duration-medium) ease-in-out, opacity var(--duration-medium) 250ms ease-in-out, visibility var(--duration-medium) 250ms ease-in-out;
+}

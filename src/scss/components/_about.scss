@@ -130,6 +130,8 @@
 
   &__img {
     position: relative;
+    display: flex;
+    align-items: flex-end;
 
     &::before {
       content: "";

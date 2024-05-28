@@ -70,25 +70,6 @@
   &__item {
     max-width: 246px;
 
-    h3 {
-      margin: 0;
-      margin-bottom: 15px;
-      font-weight: 600;
-      font-size: 24px;
-      color: var(--dark-color);
-
-      @include mobile {
-        font-size: 18px;
-      }
-    }
-
-    p {
-      margin: 0;
-      font-weight: 500;
-      font-size: 16px;
-      color: var(--light-grey-color);
-    }
-
     @include tablet {
       max-width: 100%;
     }
@@ -159,6 +140,25 @@
     @include mobile {
       margin-bottom: 30px;
     }
+  }
+
+  &__item-title {
+    margin: 0;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--dark-color);
+
+    @include mobile {
+      font-size: 18px;
+    }
+  }
+
+  &__item-descr {
+    margin: 0;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--light-grey-color);
   }
 
   &__btn {

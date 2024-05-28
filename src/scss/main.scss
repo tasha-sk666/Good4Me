@@ -6,6 +6,8 @@
 @import "keyframes";
 
 // подключения компонентов страницы
+@import "./components/accent-typography";
+@import "./components/preloader";
 @import "./components/slider-controlls";
 @import "./components/form-message";
 @import "./components/btn";
